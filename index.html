@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull-Up Score Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏆 Pull-Up Score Challenge</h1>
+        <button id="rulesBtn">Rules</button>
+    </header>
+
+    <img src="assets/hero.png"
+         alt="8-bit Pull-Up Hero"
+         class="hero">
+
+    <div class="calculator">
+
+        <h2>Submit Your Score</h2>
+
+        <label>Reps</label>
+        <input id="reps" type="number" min="1">
+
+        <label>Total Time (seconds)</label>
+        <input id="time" type="number" min="1">
+
+        <label>Swing Level</label>
+
+        <select id="swing">
+            <option value="1">Strict (No Swing)</option>
+            <option value="0.95">Minor Swing</option>
+            <option value="0.90">Moderate Swing</option>
+            <option value="0.80">Major Swing</option>
+        </select>
+
+        <label>Video Proof</label>
+        <input type="file" accept="video/*">
+
+        <button onclick="calculateScore()">
+            Calculate Score
+        </button>
+
+        <div id="results">
+            Score: 0
+        </div>
+
+    </div>
+
+    <div id="rulesModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Official Rules</h2>
+
+            <p>
+                Full arm extension at the bottom.
+            </p>
+
+            <p>
+                Chin above bar at the top.
+            </p>
+
+            <p>
+                Baseline pace: 2 sec per rep.
+            </p>
+
+            <p>
+                Maximum rewarded pace: 5 sec per rep.
+            </p>
+
+            <p>
+                Maximum tempo multiplier: 1.25
+            </p>
+
+            <button onclick="closeRules()">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
